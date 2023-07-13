@@ -1,0 +1,39 @@
+@media (max-width:800px) and (min-width:0px){
+    section {
+        padding: 0 5% 0 5%;
+        >:nth-child(1){
+            width: 100%;
+        }
+    }
+    p,form{
+        width: 100%;
+    }
+    form {
+        button{
+            right: -14.8px;
+        }
+    }
+    .desktop_img{
+        display: none;
+    }
+    .mobile_img{
+        display: block;
+        width: 100%;
+    }
+}
+@media (max-width:425px) and (min-width:0px){
+    :root{
+        font-size: 13px;
+    }
+    *{
+        text-align: center;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    form {
+        button{
+            right: -10px;
+        }
+    }
+}
