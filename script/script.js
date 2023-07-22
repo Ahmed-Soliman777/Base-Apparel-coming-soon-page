@@ -1,13 +1,12 @@
-var emailCheck = document.querySelector("#email"),
+var emailCheck = document.querySelector("#mail"),
     btn = document.querySelector("#mail_btn"),
-    emailValidate = document.querySelector("#form"),
+    emailValidate = document.querySelector(".valid_mail"),
     att_check = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/
 
-function btn_mail(){
-    if(emailCheck.match(att_check)){
-        emailValidate.innerHTML = `<div>valid</div>`
+
+btn.addEventListener("click", function (ev) {
+    if (emailCheck.value == "" || !emailCheck.value.match(att_check)) {
+        emailValidate.innerHTML = `<div>invalid mail. please check your mail and try again</div>`;
+        ev.preventDefault()
     }
-    else{
-        emailValidate.innerHTML = `<div>invalid</div>`
-    }
-}
+})
